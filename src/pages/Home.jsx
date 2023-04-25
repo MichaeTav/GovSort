@@ -2,7 +2,7 @@ import React from "react";
 import topics from "../data/topics";
 import TopicCard from "../components/TopicCard";
 
-const Home = () => {
+const Home = ({ setSelectedTopic }) => {
   return (
     <div className="container">
       <h1>Gov Sort</h1>
@@ -14,6 +14,7 @@ const Home = () => {
               key={topic.title}
               title={topic.title}
               description={topic.description}
+              callback={setSelectedTopic}
             />
           ))}
         </div>
