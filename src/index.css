@@ -7,18 +7,24 @@
   background-color: #242424;
 }
 
+html,
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  height: 100vh;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  margin: auto;
 }
 
 h1 {
   font-size: 3.2em;
-  margin-top: 40px;
-  
+  margin-top: auto;
 }
 
 button {
@@ -29,6 +35,7 @@ button {
   font-weight: 500;
   font-family: inherit;
   background-color: #1a1a1a;
+  color: #ccc;
   cursor: pointer;
   transition: border-color 0.25s;
 }
@@ -37,17 +44,29 @@ button:hover {
   border-color: #e8e8e8;
 }
 
-
-@media (prefers-color-scheme: light) {
-  button {
-    background-color: #f9f9f9;
-  }
-}
-
 .container {
   display: flex;
   flex-direction: column;
+  align-items: center;
   height: 100vh;
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-height: 100vh;
+}
+
+.game-container h1 {
+  margin: 0;
+  font-size: clamp(3vw, 8vw, 4rem);
+}
+
+.bottom-container {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1rem;
 }
 
 .topic-card-container {
@@ -61,6 +80,42 @@ button:hover {
 
 @media (min-width: 1140px) {
   .topic-card-container { grid-template-columns: repeat(3, 1fr);}
+}
+
+.card {
+  width: 200px;
+  height: 225px;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 1rem;
+  background-color: #ccc;
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card p {
+  color: #1a1a1a;
+  margin: 0;
+  font-size: 1.0rem;
+}
+
+.card-list-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 100vw;
+  height: 322px;
+}
+
+.card-list {
+  display: flex;
+  width: 100%;
+  position: relative;
+  transition: transform 0.3s ease;
 }
 
 .topics {
@@ -92,4 +147,76 @@ button:hover {
 
 .topic-card button {
   margin-top: auto;
+}
+
+
+.controls-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-top: 1rem;
+}
+
+.control-btn {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem;
+  height: 3rem;
+  width: 3rem;
+}
+
+.up-triangle {
+  border-color:  transparent  transparent #ccc;
+  border-width: 0 1rem 1rem;
+  border-style: solid;
+  display: inline-block;
+  margin-top: auto;
+  width: 0;
+  height: 0;
+}
+
+.control-btn .right-triangle {
+  border-color: transparent transparent transparent #ccc;
+  border-width: 0.5rem 0 0.5rem 0.5rem;
+  border-style: solid;
+  display: inline-block;
+  width: 0;
+  height: 0;
+}
+
+.control-btn .left-triangle {
+  border-color: transparent #ccc transparent transparent;
+  border-width: 0.5rem 0.5rem 0.5rem 0;
+  border-style: solid;
+  display: inline-block;
+  width: 0;
+  height: 0;
+}
+
+.game-over-modal {
+  width: 200px;
+  height: 250px;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #242424;
+  border-radius: 10px;
+  z-index: 1000;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,.7);
+  z-index: 1000;
 }
