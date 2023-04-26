@@ -26,7 +26,12 @@ const CardList = ({ placedCards, currentIndex }) => {
     <div className="card-list-container">
       <div ref={listRef} className="card-list">
         {placedCards.map((card, index) => (
-          <Card key={index} description={card.description} order={card.order} />
+          <Card
+            key={index}
+            description={card.description}
+            order={card.order}
+            url={card.url}
+          />
         ))}
       </div>
       <span className="up-triangle" />

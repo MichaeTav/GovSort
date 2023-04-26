@@ -1,4 +1,3 @@
-import "./App.css";
 import Home from "./pages/home";
 import Game from "./pages/Game";
 import { useEffect, useState } from "react";

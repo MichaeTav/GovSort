@@ -19,7 +19,7 @@ body {
 #root {
   width: 100%;
   height: 100%;
-  margin: auto;
+  text-align: center;
 }
 
 h1 {
@@ -51,14 +51,24 @@ button:hover {
   height: 100vh;
 }
 
+.container h1 {
+  margin: 0;
+  font-size: clamp(3vw, 10vw, 4rem);
+}
+
 .game-container {
+  width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
+}
+
+.game {
   max-height: 100vh;
 }
 
-.game-container h1 {
+.game h1 {
   margin: 0;
   font-size: clamp(3vw, 8vw, 4rem);
 }
@@ -133,6 +143,14 @@ button:hover {
   box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.3);
 }
 
+.topic-card .description {
+  text-align: center;
+  color: #1a1a1a;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 .topic-card h2 {
   margin-top: 10px;
   margin-bottom: auto;
@@ -195,8 +213,8 @@ button:hover {
 }
 
 .game-over-modal {
-  width: 200px;
-  height: 250px;
+  width: 250px;
+  height: 350px;
   border-radius: 10px;
   padding: 20px;
   display: flex;

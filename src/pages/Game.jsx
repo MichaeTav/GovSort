@@ -6,7 +6,7 @@ import GameOverModal from "../components/GameOverModal";
 import amendments from "../data/amendments";
 import presidents from "../data/presidents";
 import supremeCourtCases from "../data/supremeCourtCases";
-import unitedstateshistory from "../data/unitedstateshistory";
+import unitedstateshistory from "../data/unitedStatesHistory";
 import test from "../data/test";
 
 const Game = ({ title, endGame }) => {
@@ -114,20 +114,22 @@ const Game = ({ title, endGame }) => {
   }, [title]);
 
   return (
-    <div className="game-container">
+    <div className="game">
       <h1>{title}</h1>
-      <CardList placedCards={placedCards} currentIndex={currentIndex} />
-      <div className="bottom-container">
-        {currentCard && (
-          <Card description={currentCard.description} order="???" />
-        )}
-        <Controls
-          placeCard={getNextCard}
-          currentIndex={currentIndex}
-          setCurrentIndex={setCurrentIndex}
-          numOfPlacedCards={placedCards.length}
-          gameOver={openModal}
-        />
+      <div className="game-container">
+        <CardList placedCards={placedCards} currentIndex={currentIndex} />
+        <div className="bottom-container">
+          {currentCard && (
+            <Card description={currentCard.description} order="???" />
+          )}
+          <Controls
+            placeCard={getNextCard}
+            currentIndex={currentIndex}
+            setCurrentIndex={setCurrentIndex}
+            numOfPlacedCards={placedCards.length}
+            gameOver={openModal}
+          />
+        </div>
       </div>
       <GameOverModal
         endGame={endGame}
