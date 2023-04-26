@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 
 const Controls = ({
   placeCard,
@@ -7,14 +7,19 @@ const Controls = ({
   numOfPlacedCards,
   gameOver,
 }) => {
+  const leftButtonRef = useRef(null);
+  const rightButtonRef = useRef(null);
+
   const handleLeftClick = () => {
     //make sure index doesn't go under 0
     if (currentIndex - 1 >= 0) setCurrentIndex(currentIndex - 1);
+    if (leftButtonRef.current) leftButtonRef.current.blur();
   };
 
   const handleRightClick = () => {
     //make sure index doesn't go out of index of placedCards
     if (currentIndex + 1 <= numOfPlacedCards) setCurrentIndex(currentIndex + 1);
+    if (rightButtonRef.current) rightButtonRef.current.blur();
   };
 
   const handleButtonKeyDown = (event) => {
@@ -58,7 +63,11 @@ const Controls = ({
 
   return (
     <div className="controls-container">
-      <button className="control-btn" onClick={handleLeftClick}>
+      <button
+        ref={leftButtonRef}
+        className="control-btn"
+        onClick={handleLeftClick}
+      >
         <span className="left-triangle" />
       </button>
       <button
@@ -68,7 +77,11 @@ const Controls = ({
       >
         PLACE
       </button>
-      <button className="control-btn" onClick={handleRightClick}>
+      <button
+        ref={rightButtonRef}
+        className="control-btn"
+        onClick={handleRightClick}
+      >
         <span className="right-triangle" />
       </button>
     </div>
