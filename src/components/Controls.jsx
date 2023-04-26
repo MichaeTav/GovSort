@@ -17,6 +17,12 @@ const Controls = ({
     if (currentIndex + 1 <= numOfPlacedCards) setCurrentIndex(currentIndex + 1);
   };
 
+  const handleButtonKeyDown = (event) => {
+    if (event.key === " " || event.key === "Enter") {
+      event.preventDefault();
+    }
+  };
+
   const handleKeyPress = (event) => {
     if (!gameOver) {
       switch (event.key) {
@@ -55,7 +61,11 @@ const Controls = ({
       <button className="control-btn" onClick={handleLeftClick}>
         <span className="left-triangle" />
       </button>
-      <button className="place-btn" onClick={placeCard}>
+      <button
+        className="place-btn"
+        onClick={placeCard}
+        onKeyDown={handleButtonKeyDown}
+      >
         PLACE
       </button>
       <button className="control-btn" onClick={handleRightClick}>
