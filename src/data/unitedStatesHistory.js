@@ -25,11 +25,6 @@ export default [
     url: "",
   },
   {
-    order: 1865,
-    description: "American Civil War ends",
-    url: "",
-  },
-  {
     order: 1920,
     description: "19th Amendment grants women the right to vote",
     url: "",
@@ -45,18 +40,8 @@ export default [
     url: "",
   },
   {
-    order: 1945,
-    description: "End of World War II",
-    url: "",
-  },
-  {
     order: 1950,
     description: "Korean War begins",
-    url: "",
-  },
-  {
-    order: 1953,
-    description: "Korean War ends",
     url: "",
   },
   {

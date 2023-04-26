@@ -2,19 +2,26 @@ export default [
   {
     title: "Amendments",
     description: "Sort amendments by number",
+    difficulty: "MEDIUM",
+    numberOfCards: 27,
   },
   {
     title: "Presidents",
-    description: "Sort Presidents by inauguration date",
+    description: "Sort Presidents inorder",
+    difficulty: "HARD",
+    numberOfCards: 45,
   },
   {
     title: "Supreme Court",
-    description: "Sort famous Supreme Court Cases by decision date",
+    description: "Sort famous Supreme Court Cases",
+    difficulty: "HARD",
+    numberOfCards: 17,
   },
   {
     title: "U.S. History",
-    description:
-      "Sort key events in United States History from declaring independence to the covid pandemic",
+    description: "Sort key events in United States History",
+    difficulty: "EASY",
+    numberOfCards: 15,
   },
   {
     title: "TEST",
