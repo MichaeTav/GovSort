@@ -23,8 +23,8 @@ export default [
     difficulty: "EASY",
     numberOfCards: 15,
   },
-  {
-    title: "TEST",
-    description: "TESTING",
-  },
+  // {
+  //   title: "TEST",
+  //   description: "TESTING",
+  // },
 ];
