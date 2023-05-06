@@ -9,7 +9,7 @@ export default [
     title: "Presidents",
     description: "Sort Presidents inorder",
     difficulty: "HARD",
-    numberOfCards: 45,
+    numberOfCards: 46,
   },
   {
     title: "Supreme Court",
