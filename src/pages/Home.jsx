@@ -1,6 +1,7 @@
 import React from "react";
 import topics from "../data/topics";
 import TopicCard from "../components/TopicCard";
+import Footer from "../components/Footer";
 
 const Home = ({ setSelectedTopic }) => {
   return (
@@ -21,6 +22,7 @@ const Home = ({ setSelectedTopic }) => {
           ))}
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
