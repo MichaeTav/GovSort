@@ -129,7 +129,7 @@ button:hover {
 }
 
 .topics {
-  margin: auto;
+  margin: 48px auto;
 }
 
 .topic-card {
@@ -237,4 +237,10 @@ button:hover {
   bottom: 0;
   background-color: rgba(0,0,0,.7);
   z-index: 1000;
+}
+
+.github-logo {
+  margin-top: auto;
+  max-width: 48px;
+  max-height: 48px;
 }
