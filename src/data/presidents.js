@@ -106,7 +106,7 @@ export default [
   },
   {
     order: 22,
-    description: "Grover Cleveland",
+    description: "Grover Cleveland 1",
     url: "https://www.whitehouse.gov/about-the-white-house/presidents/grover-cleveland/",
   },
   {
@@ -116,7 +116,7 @@ export default [
   },
   {
     order: 24,
-    description: "Grover Cleveland",
+    description: "Grover Cleveland 2",
     url: "https://www.whitehouse.gov/about-the-white-house/presidents/grover-cleveland/",
   },
   {
