@@ -1,5 +1,5 @@
 # GovSort
-GovSort was my final project for my political science class. We were tasked with creating a project that reflects what we have learned throughout the semester. So I decided to make a game about sorting the different topics we learned. The topics include: presidents, supreme court cases, amendments, and general U.S. history. I wanted to make something that was fun and easy to play.
+GovSort was my final project for my political science class. We were tasked with creating a project that reflects what we have learned throughout the semester. So I decided to make a game about sorting the different topics we learned. The topics include: presidents, supreme court cases, amendments, and general U.S. history. I wanted to make something that was fun and easy to play. You can test it out [here](https://www.govsort.com/)
 
 # How to Play
 1. You begin by selecting from the 4 topics. Each topic card will show your highscore, total number of cards that need to be sorted, and the difficulty.
